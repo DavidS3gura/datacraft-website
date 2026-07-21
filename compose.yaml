@@ -1,0 +1,19 @@
+name: datacraft-website
+
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+
+    networks:
+      proxy:
+        aliases:
+          - datacraft-website
+
+networks:
+  proxy:
+    external: true
+    name: datacraft_proxy
