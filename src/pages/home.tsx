@@ -44,7 +44,7 @@ export default function Home() {
             </Link>
             <Link href="/servicios">
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-base rounded-full px-8 h-12">
-                Ver servicios
+                Ver nuestros servicios
               </Button>
             </Link>
           </div>
