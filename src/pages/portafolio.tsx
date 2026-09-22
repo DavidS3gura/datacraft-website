@@ -60,7 +60,7 @@ const projects: Project[] = [
     id: "booking",
     title: "Sistemas de Reserva y Agendamiento",
     description: "Plataformas de reservas en línea para cualquier negocio que trabaje con citas: clínicas, salones, talleres, consultorios. Notificaciones automáticas y calendario dinámico.",
-    image: "/images/booking-hero.png",
+    image: "/images/booking-cover.png",
     links: [
       { label: "Ver planes", url: "https://booking-staging.datacraft.website/planes" },
     ],
