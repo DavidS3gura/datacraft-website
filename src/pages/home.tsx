@@ -123,17 +123,14 @@ export default function Home() {
                 <h3 className="text-2xl font-bold font-display mb-3">Sitios Web Corporativos</h3>
                 <p className="text-muted-foreground mb-6">Proyecta confianza y profesionalismo con una página web a la medida de tu empresa.</p>
               </div>
-              <div className="h-48 bg-muted relative overflow-hidden mt-6 flex items-center justify-center p-8">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10"></div>
-                <div className="w-full h-full bg-background rounded-t-xl shadow-xl border border-b-0 p-4 transform translate-y-4 group-hover:-translate-y-2 transition-transform duration-500 flex flex-col gap-3">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-primary/20"></div>
-                    <div className="h-4 w-32 bg-muted rounded"></div>
-                  </div>
-                  <div className="h-2 w-full bg-muted rounded mt-2"></div>
-                  <div className="h-2 w-3/4 bg-muted rounded"></div>
-                  <div className="h-24 w-full bg-muted/50 rounded mt-2"></div>
-                </div>
+              <div className="h-48 bg-muted relative overflow-hidden mt-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent z-10"></div>
+                <img
+                  src="/images/portfolio-web.png"
+                  alt="Vista previa de sitio web corporativo"
+                  className="w-full h-full object-cover object-top transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
             </StaggerItem>
 
@@ -142,14 +139,14 @@ export default function Home() {
                 <h3 className="text-2xl font-bold font-display mb-3">E-commerce</h3>
                 <p className="text-muted-foreground mb-6">Tu tienda abierta 24/7. Vende tus productos en línea con pasarelas de pago integradas.</p>
               </div>
-              <div className="h-48 bg-muted relative overflow-hidden mt-6 flex items-center justify-center p-8">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10"></div>
-                <div className="w-full h-full bg-background rounded-t-xl shadow-xl border border-b-0 p-4 transform translate-y-4 group-hover:-translate-y-2 transition-transform duration-500">
-                  <div className="grid grid-cols-2 gap-3 h-full">
-                    <div className="bg-muted/50 rounded-lg h-full"></div>
-                    <div className="bg-muted/50 rounded-lg h-full"></div>
-                  </div>
-                </div>
+              <div className="h-48 bg-muted relative overflow-hidden mt-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent z-10"></div>
+                <img
+                  src="/images/portfolio-ecommerce.png"
+                  alt="Vista previa de tienda virtual"
+                  className="w-full h-full object-cover object-top transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
             </StaggerItem>
           </StaggerGroup>
