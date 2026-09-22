@@ -28,7 +28,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
               <img
-                src="/images/logo.png"
+                src="/images/logo-principal.png"
                 alt="DataCraft"
                 className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />

@@ -8,7 +8,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <img
-                src="/images/logo.png"
+                src="/images/logo-principal.png"
                 alt="DataCraft"
                 className="h-8 w-auto object-contain"
               />
