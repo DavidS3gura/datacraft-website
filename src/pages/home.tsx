@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm text-primary mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="inline-flex items-center rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm px-3 py-1 text-sm text-primary font-medium mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
             Agencia de desarrollo web en Colombia
           </div>
