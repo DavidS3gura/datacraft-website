@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "wouter"
 import { Globe, LayoutTemplate, ShoppingBag, Code, GitBranch, Wrench, Search, MessageSquare, ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -111,12 +110,17 @@ export default function Servicios() {
                 <span className="font-bold text-foreground bg-muted px-3 py-1.5 rounded-md text-sm whitespace-nowrap">
                   {service.price}
                 </span>
-                <Link href={`/contacto?servicio=${encodeURIComponent(service.title)}`} className="w-full sm:w-auto">
+                <a
+                  href={`https://wa.me/573181865120?text=${encodeURIComponent(`Hola DataCraft, me interesa cotizar el servicio: ${service.title}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
                   <Button variant="default" className="w-full sm:w-auto text-sm group rounded-full">
                     Cotizar
                     <ArrowRight className="ml-2 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </Link>
+                </a>
               </div>
             </StaggerItem>
           ))}

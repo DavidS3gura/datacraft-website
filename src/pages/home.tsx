@@ -196,12 +196,16 @@ export default function Home() {
           <p className="text-xl text-muted-foreground mb-10 max-w-xl mx-auto">
             Agenda una consulta gratuita con nuestro equipo y descubre cómo podemos ayudarte.
           </p>
-          <Link href="/contacto">
+          <a
+            href={`https://wa.me/573181865120?text=${encodeURIComponent("Hola DataCraft, quiero hablarles de mi proyecto")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="lg" className="rounded-full shadow-lg shadow-primary/20 px-10 h-14 text-lg font-semibold">
               Hablemos de tu proyecto
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </Link>
+          </a>
         </Reveal>
       </section>
     </main>
