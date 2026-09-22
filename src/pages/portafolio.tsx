@@ -55,6 +55,15 @@ const projects = [
     fullDesc: "Sistema web a medida que elimina las agendas de papel. Tus clientes agendan solos según tu disponibilidad y tu equipo gestiona el calendario desde un solo panel, con recordatorios automáticos por correo y WhatsApp."
   },
   {
+    id: "pos",
+    title: "POS DataCraft — Punto de Venta",
+    description: "Sistema POS para restaurantes y negocios: comandas en tiempo real, pagos, facturación, inventario y control de personal en una sola plataforma.",
+    image: "/images/pos-datacraft.png",
+    tags: ["POS", "Sistema Web"],
+    techStack: ["React", "Node.js", "PostgreSQL", "NestJS"],
+    fullDesc: "POS DataCraft centraliza la operación de restaurantes: comandas en tiempo real, múltiples métodos de pago, propinas, documentos de venta, inventario y control de personal (meseros, cajeros y cocina) en un solo flujo."
+  },
+  {
     id: "dashboard",
     title: "Software y Paneles a Medida",
     description: "Plataformas internas, dashboards y sistemas de gestión diseñados a la medida de los procesos de tu empresa, con reportes en tiempo real.",
