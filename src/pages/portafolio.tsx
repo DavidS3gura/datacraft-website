@@ -15,7 +15,20 @@ import {
 } from "@/components/ui/dialog"
 import { Reveal, StaggerGroup, StaggerItem, staggerItem } from "@/components/motion/reveal"
 
-const projects = [
+type Project = {
+  id: string
+  title: string
+  description: string
+  image: string
+  fit?: "cover" | "contain"
+  imageBg?: string
+  links?: { label: string; url: string }[]
+  tags: string[]
+  techStack: string[]
+  fullDesc: string
+}
+
+const projects: Project[] = [
   {
     id: "web",
     title: "Sitios Web para Negocios",
@@ -47,9 +60,11 @@ const projects = [
     id: "booking",
     title: "Sistemas de Reserva y Agendamiento",
     description: "Plataformas de reservas en línea para cualquier negocio que trabaje con citas: clínicas, salones, talleres, consultorios. Notificaciones automáticas y calendario dinámico.",
-    image: "/images/booking-login.png",
-    fit: "contain",
-    imageBg: "bg-[#0b100e]",
+    image: "/images/booking-hero.png",
+    links: [
+      { label: "Ver planes", url: "https://booking-staging.datacraft.website/planes" },
+      { label: "Ver login", url: "https://booking-staging.datacraft.website/login" },
+    ],
     tags: ["Sistema Web", "Automatización"],
     techStack: ["React", "Node.js", "PostgreSQL", "Twilio API"],
     fullDesc: "Sistema web a medida que elimina las agendas de papel. Tus clientes agendan solos según tu disponibilidad y tu equipo gestiona el calendario desde un solo panel, con recordatorios automáticos por correo y WhatsApp."
@@ -157,17 +172,29 @@ export default function Portafolio() {
                     </div>
                   </div>
                   
-                  <div className="mt-8 flex justify-end">
-                    <DialogClose asChild>
-                      <Button variant="outline" className="mr-2">Cerrar</Button>
-                    </DialogClose>
-                    <a
-                      href={`https://wa.me/573181865120?text=${encodeURIComponent(`Hola DataCraft, me interesa cotizar un proyecto similar a: ${project.title}`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button>Cotizar un proyecto similar</Button>
-                    </a>
+                  <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex flex-wrap gap-2">
+                      {project.links?.map(link => (
+                        <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" size="sm" className="gap-1.5">
+                            <ExternalLink className="h-3.5 w-3.5" />
+                            {link.label}
+                          </Button>
+                        </a>
+                      ))}
+                    </div>
+                    <div className="flex justify-end ml-auto">
+                      <DialogClose asChild>
+                        <Button variant="outline" className="mr-2">Cerrar</Button>
+                      </DialogClose>
+                      <a
+                        href={`https://wa.me/573181865120?text=${encodeURIComponent(`Hola DataCraft, me interesa cotizar un proyecto similar a: ${project.title}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button>Cotizar un proyecto similar</Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </DialogContent>
