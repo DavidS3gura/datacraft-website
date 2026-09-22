@@ -10,11 +10,8 @@ export function Footer() {
               <img
                 src="/images/logo.png"
                 alt="DataCraft"
-                className="h-9 w-9 object-contain"
+                className="h-8 w-auto object-contain"
               />
-              <span className="font-display text-lg font-bold tracking-tight">
-                DataCraft
-              </span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Soluciones digitales funcionales, modernas y escalables para negocios que buscan crecer en internet.

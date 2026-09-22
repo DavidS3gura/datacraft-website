@@ -30,11 +30,8 @@ export function Navbar() {
               <img
                 src="/images/logo.png"
                 alt="DataCraft"
-                className="h-11 w-11 object-contain transition-transform duration-300 group-hover:scale-110"
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="font-display text-xl font-bold tracking-tight text-foreground">
-                DataCraft
-              </span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-8">
