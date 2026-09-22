@@ -1,5 +1,6 @@
 import * as React from "react"
-import { ExternalLink, Code2 } from "lucide-react"
+import { Link } from "wouter"
+import { ExternalLink, Code2, ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,27 +15,27 @@ import { Reveal, StaggerGroup, StaggerItem, staggerItem } from "@/components/mot
 
 const projects = [
   {
-    id: "beauty",
-    title: "Sitio web para Salón de Belleza",
-    description: "Una página web elegante y moderna para un salón de belleza premium, enfocada en mostrar servicios, galería de trabajos y facilitar el contacto por WhatsApp.",
+    id: "web",
+    title: "Sitios Web para Negocios",
+    description: "Páginas web modernas y a la medida para cualquier tipo de negocio: salones, restaurantes, consultorios, tiendas y más.",
     image: "/images/beauty-salon.jpg",
     tags: ["Página Web", "Diseño UI/UX"],
     techStack: ["React", "Tailwind CSS", "Framer Motion"],
-    fullDesc: "Este proyecto consistió en diseñar una experiencia digital que reflejara la elegancia del espacio físico. Se implementó un catálogo visual de servicios, integración directa con WhatsApp para reservas rápidas y un diseño 100% responsivo."
+    fullDesc: "Diseñamos sitios web que reflejan la identidad de cada negocio: catálogo de servicios, galería de trabajos, contacto directo por WhatsApp y diseño 100% responsivo. Adaptable a cualquier industria."
   },
   {
-    id: "jewelry",
-    title: "E-commerce para Joyería",
-    description: "Tienda virtual de lujo con pasarela de pagos integrada, filtros avanzados de búsqueda y un diseño oscuro y sofisticado.",
+    id: "ecommerce",
+    title: "Tiendas Virtuales (E-commerce)",
+    description: "Tiendas online con pasarela de pagos, catálogo de productos y gestión de inventario. Vende lo que quieras: joyería, moda, tecnología, alimentos y más.",
     image: "/images/jewelry-store.jpg",
     tags: ["E-commerce", "Tienda Virtual"],
     techStack: ["Next.js", "Stripe", "PostgreSQL", "Zustand"],
-    fullDesc: "Desarrollo completo de un e-commerce para una marca de joyería fina. El reto principal fue lograr un rendimiento impecable en la carga de imágenes de alta resolución, implementando un carrito de compras dinámico y un panel de administración personalizado para la gestión de inventario."
+    fullDesc: "Desarrollamos e-commerce completos con rendimiento impecable en la carga de imágenes, carrito de compras dinámico, pasarelas de pago y un panel de administración personalizado para gestionar productos e inventario."
   },
   {
     id: "professional",
-    title: "Landing Page - Servicios Profesionales",
-    description: "Sitio de una sola página (One-Pager) de alta conversión para un despacho de abogados, orientado a la captación de leads (clientes potenciales).",
+    title: "Landing Pages de Alta Conversión",
+    description: "Páginas de aterrizaje (One-Pagers) orientadas a captar clientes para cualquier servicio profesional: abogados, médicos, consultores, agencias y más.",
     image: "/images/prof-services.jpg",
     tags: ["Landing Page", "Conversión"],
     techStack: ["React", "Vite", "HubSpot CRM", "Tailwind CSS"],
@@ -42,21 +43,21 @@ const projects = [
   },
   {
     id: "booking",
-    title: "Sistema de Reservas",
-    description: "Plataforma web personalizada para la gestión de citas de una clínica médica, con notificaciones automatizadas y calendarios dinámicos.",
-    image: "/images/booking-system.jpg",
+    title: "Sistemas de Reserva y Agendamiento",
+    description: "Plataformas de reservas en línea para cualquier negocio que trabaje con citas: clínicas, salones, talleres, consultorios. Notificaciones automáticas y calendario dinámico.",
+    image: "/images/booking-login.png",
     tags: ["Sistema Web", "Automatización"],
     techStack: ["React", "Node.js", "PostgreSQL", "Twilio API"],
-    fullDesc: "Un sistema web a medida que eliminó el uso de agendas de papel. Permite a los pacientes agendar sus propias citas según disponibilidad, y al personal médico gestionar su calendario, enviando recordatorios automáticos por SMS y correo."
+    fullDesc: "Sistema web a medida que elimina las agendas de papel. Tus clientes agendan solos según tu disponibilidad y tu equipo gestiona el calendario desde un solo panel, con recordatorios automáticos por correo y WhatsApp."
   },
   {
     id: "dashboard",
-    title: "Plataforma Interna Empresarial",
-    description: "Un panel de control (Dashboard) robusto para el análisis de datos de ventas e inventario, con reportes en tiempo real y gráficos interactivos.",
+    title: "Software y Paneles a Medida",
+    description: "Plataformas internas, dashboards y sistemas de gestión diseñados a la medida de los procesos de tu empresa, con reportes en tiempo real.",
     image: "/images/internal-platform.jpg",
     tags: ["Dashboard", "Desarrollo a Medida"],
     techStack: ["React", "Recharts", "Express", "MongoDB"],
-    fullDesc: "Desarrollo de una herramienta interna para centralizar la información de múltiples sucursales. Cuenta con visualización de datos complejos, exportación de reportes a PDF/Excel y gestión de usuarios con diferentes niveles de permisos."
+    fullDesc: "Desarrollo de herramientas internas para centralizar la información de tu negocio. Visualización de datos complejos, exportación de reportes a PDF/Excel y gestión de usuarios con diferentes niveles de permisos."
   }
 ]
 
@@ -149,6 +150,21 @@ export default function Portafolio() {
             </Dialog>
           ))}
         </StaggerGroup>
+
+        <Reveal className="mt-20 text-center max-w-3xl mx-auto">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground mb-4">
+            ¿No ves lo que necesitas en nuestro portafolio?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Diseñamos software a la medida de tus necesidades. Cuéntanos tu idea y la hacemos realidad.
+          </p>
+          <Link href="/contacto">
+            <Button size="lg" className="rounded-full shadow-lg shadow-primary/20 px-10 h-14 text-lg font-semibold">
+              Solicitar cotización
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+        </Reveal>
       </div>
     </main>
   )
