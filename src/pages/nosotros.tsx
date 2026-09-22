@@ -46,6 +46,13 @@ export default function Nosotros() {
       image: "/images/pos-datacraft.png",
       url: `https://wa.me/573181865120?text=${encodeURIComponent("Hola DataCraft, quiero solicitar una demo del POS DataCraft")}`,
       urlLabel: "Solicitar demo"
+    },
+    {
+      title: "Software a Medida",
+      desc: "Plataformas internas, dashboards y sistemas de gestión diseñados específicamente para los procesos de tu empresa.",
+      image: "/images/portfolio-dashboard.png",
+      url: `https://wa.me/573181865120?text=${encodeURIComponent("Hola DataCraft, me interesa un software a medida para mi empresa")}`,
+      urlLabel: "Cotizar proyecto"
     }
   ]
 
@@ -138,7 +145,7 @@ export default function Nosotros() {
             </p>
           </Reveal>
 
-          <StaggerGroup className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <StaggerGroup className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {productos.map((producto, i) => (
               <StaggerItem key={i} variants={staggerItem} className="bg-card border rounded-2xl overflow-hidden hover-elevate transition-all duration-300 flex flex-col">
                 <div className="aspect-[16/9] bg-muted overflow-hidden">
