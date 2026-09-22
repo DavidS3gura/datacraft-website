@@ -3,8 +3,10 @@ import { Link } from "wouter"
 import { ExternalLink, Code2, ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -18,7 +20,7 @@ const projects = [
     id: "web",
     title: "Sitios Web para Negocios",
     description: "Páginas web modernas y a la medida para cualquier tipo de negocio: salones, restaurantes, consultorios, tiendas y más.",
-    image: "/images/beauty-salon.jpg",
+    image: "/images/portfolio-web.png",
     tags: ["Página Web", "Diseño UI/UX"],
     techStack: ["React", "Tailwind CSS", "Framer Motion"],
     fullDesc: "Diseñamos sitios web que reflejan la identidad de cada negocio: catálogo de servicios, galería de trabajos, contacto directo por WhatsApp y diseño 100% responsivo. Adaptable a cualquier industria."
@@ -27,7 +29,7 @@ const projects = [
     id: "ecommerce",
     title: "Tiendas Virtuales (E-commerce)",
     description: "Tiendas online con pasarela de pagos, catálogo de productos y gestión de inventario. Vende lo que quieras: joyería, moda, tecnología, alimentos y más.",
-    image: "/images/jewelry-store.jpg",
+    image: "/images/portfolio-ecommerce.png",
     tags: ["E-commerce", "Tienda Virtual"],
     techStack: ["Next.js", "Stripe", "PostgreSQL", "Zustand"],
     fullDesc: "Desarrollamos e-commerce completos con rendimiento impecable en la carga de imágenes, carrito de compras dinámico, pasarelas de pago y un panel de administración personalizado para gestionar productos e inventario."
@@ -36,7 +38,7 @@ const projects = [
     id: "professional",
     title: "Landing Pages de Alta Conversión",
     description: "Páginas de aterrizaje (One-Pagers) orientadas a captar clientes para cualquier servicio profesional: abogados, médicos, consultores, agencias y más.",
-    image: "/images/prof-services.jpg",
+    image: "/images/portfolio-landing.png",
     tags: ["Landing Page", "Conversión"],
     techStack: ["React", "Vite", "HubSpot CRM", "Tailwind CSS"],
     fullDesc: "Estrategia digital y desarrollo de landing page enfocada en resultados. Se aplicaron técnicas de copywriting y jerarquía visual para guiar al usuario hacia el formulario de contacto, logrando aumentar la tasa de conversión en un 40%."
@@ -46,6 +48,8 @@ const projects = [
     title: "Sistemas de Reserva y Agendamiento",
     description: "Plataformas de reservas en línea para cualquier negocio que trabaje con citas: clínicas, salones, talleres, consultorios. Notificaciones automáticas y calendario dinámico.",
     image: "/images/booking-login.png",
+    fit: "contain",
+    imageBg: "bg-[#0b100e]",
     tags: ["Sistema Web", "Automatización"],
     techStack: ["React", "Node.js", "PostgreSQL", "Twilio API"],
     fullDesc: "Sistema web a medida que elimina las agendas de papel. Tus clientes agendan solos según tu disponibilidad y tu equipo gestiona el calendario desde un solo panel, con recordatorios automáticos por correo y WhatsApp."
@@ -54,7 +58,7 @@ const projects = [
     id: "dashboard",
     title: "Software y Paneles a Medida",
     description: "Plataformas internas, dashboards y sistemas de gestión diseñados a la medida de los procesos de tu empresa, con reportes en tiempo real.",
-    image: "/images/internal-platform.jpg",
+    image: "/images/portfolio-dashboard.png",
     tags: ["Dashboard", "Desarrollo a Medida"],
     techStack: ["React", "Recharts", "Express", "MongoDB"],
     fullDesc: "Desarrollo de herramientas internas para centralizar la información de tu negocio. Visualización de datos complejos, exportación de reportes a PDF/Excel y gestión de usuarios con diferentes niveles de permisos."
@@ -79,11 +83,14 @@ export default function Portafolio() {
             <Dialog key={project.id}>
               <DialogTrigger asChild>
                 <StaggerItem variants={staggerItem} className="group cursor-pointer rounded-2xl border bg-card overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                  <div className="aspect-[4/3] bg-muted relative overflow-hidden">
+                  <div className={cn("aspect-[4/3] relative overflow-hidden", project.imageBg ?? "bg-muted")}>
                     <img 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={cn(
+                        "w-full h-full transition-transform duration-700 group-hover:scale-105",
+                        project.fit === "contain" ? "object-contain" : "object-cover"
+                      )}
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -109,8 +116,8 @@ export default function Portafolio() {
                 </StaggerItem>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[700px] p-0 overflow-hidden border-0">
-                <div className="aspect-[16/9] w-full relative bg-muted">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                <div className={cn("aspect-[16/9] w-full relative", project.imageBg ?? "bg-muted")}>
+                  <img src={project.image} alt={project.title} className={cn("w-full h-full", project.fit === "contain" ? "object-contain" : "object-cover")} />
                 </div>
                 <div className="p-6 sm:p-8">
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -142,8 +149,16 @@ export default function Portafolio() {
                   </div>
                   
                   <div className="mt-8 flex justify-end">
-                    <Button variant="outline" className="mr-2">Cerrar</Button>
-                    <Button>Cotizar un proyecto similar</Button>
+                    <DialogClose asChild>
+                      <Button variant="outline" className="mr-2">Cerrar</Button>
+                    </DialogClose>
+                    <a
+                      href={`https://wa.me/573181865120?text=${encodeURIComponent(`Hola DataCraft, me interesa cotizar un proyecto similar a: ${project.title}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button>Cotizar un proyecto similar</Button>
+                    </a>
                   </div>
                 </div>
               </DialogContent>

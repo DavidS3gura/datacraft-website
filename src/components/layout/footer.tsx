@@ -43,7 +43,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Colombia (Atención remota)</li>
               <li><a href="mailto:hola@datacraft.co" className="hover:text-primary transition-colors">hola@datacraft.co</a></li>
-              <li><a href="https://wa.me/573015999122" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+57 301 599 9122</a></li>
+              <li><a href="https://wa.me/573181865120" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+57 318 186 5120</a></li>
             </ul>
           </div>
         </div>

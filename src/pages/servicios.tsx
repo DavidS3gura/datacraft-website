@@ -27,7 +27,7 @@ const services = [
     title: "Tienda virtual / e-commerce",
     description: "Vende 24/7 con una tienda online robusta. Gestión de inventario, pasarelas de pago y carrito de compras intuitivo.",
     benefits: ["Pasarelas de pago (Wompi, MercadoPago)", "Gestión de envíos e inventario", "Catálogo ilimitado", "Cupones y descuentos"],
-    price: "Desde $2.500.000 COP",
+    price: "Desde $1.500.000 COP",
     color: "bg-accent/10 text-accent"
   },
   {
@@ -35,7 +35,7 @@ const services = [
     title: "Sistema web personalizado",
     description: "Software a la medida para resolver problemas específicos de tu negocio. Intranets, CRMs, portales de clientes, etc.",
     benefits: ["Arquitectura escalable", "Bases de datos seguras", "Roles y permisos", "APIs y automatizaciones"],
-    price: "Desde $4.500.000 COP",
+    price: "Desde $2.000.000 COP",
     color: "bg-secondary/10 text-secondary"
   },
   {
@@ -59,7 +59,7 @@ const services = [
     title: "Optimización SEO básica",
     description: "Aparece en los primeros resultados de Google. Optimizamos la estructura técnica y el contenido de tu web.",
     benefits: ["Auditoría técnica", "Búsqueda de palabras clave", "Optimización de velocidad", "Configuración Google Analytics"],
-    price: "Desde $600.000 COP",
+    price: "Desde $350.000 COP",
     color: "bg-primary/10 text-primary"
   },
   {
@@ -67,7 +67,7 @@ const services = [
     title: "Integración con WhatsApp/Redes",
     description: "Canaliza a tus visitantes directamente a WhatsApp, Messenger o formularios inteligentes conectados a tu correo.",
     benefits: ["Chat flotante de WhatsApp", "Formularios dinámicos", "Enlaces a redes sociales", "Mensajes pre-configurados"],
-    price: "Desde $150.000 COP",
+    price: "Desde $80.000 COP",
     color: "bg-[#25D366]/10 text-[#25D366]"
   }
 ]

@@ -57,7 +57,7 @@ export default function Contacto() {
     const text = `Hola, quiero solicitar información sobre los servicios de DataCraft.\n\nNombre: ${data.nombre}\nCorreo: ${data.correo}\nTeléfono: ${data.telefono}\nServicio de interés: ${data.servicio}\nMensaje: ${data.mensaje}\n\nPor favor, quisiera recibir una cotización.`
     
     const encodedText = encodeURIComponent(text)
-    window.open(`https://wa.me/573015999122?text=${encodedText}`, "_blank")
+    window.open(`https://wa.me/573181865120?text=${encodedText}`, "_blank")
     
     // Optional: reset form after sending
     // form.reset()
@@ -87,8 +87,8 @@ export default function Contacto() {
                   </div>
                   <div>
                     <p className="font-medium">Teléfono / WhatsApp</p>
-                    <a href="https://wa.me/573015999122" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                      +57 301 599 9122
+                    <a href="https://wa.me/573181865120" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                      +57 318 186 5120
                     </a>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function Contacto() {
                 Escríbenos directamente a nuestro WhatsApp y hablemos en tiempo real.
               </p>
               <Button 
-                onClick={() => window.open("https://wa.me/573015999122", "_blank")}
+                onClick={() => window.open("https://wa.me/573181865120", "_blank")}
                 className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white border-0"
               >
                 Escribir al WhatsApp

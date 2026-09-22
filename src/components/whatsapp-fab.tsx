@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export function WhatsAppFAB() {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/573015999122", "_blank")
+    window.open("https://wa.me/573181865120", "_blank")
   }
 
   return (

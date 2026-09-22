@@ -50,7 +50,7 @@ public/
 ## Personalización
 
 - **Colores de marca**: editar las variables en `src/index.css` (sección `:root` y `.dark`).
-- **Número de WhatsApp**: buscar `573015999122` en `src/pages/contacto.tsx`, `src/components/whatsapp-fab.tsx` y `src/components/layout/footer.tsx`, y reemplazar por el número real.
+- **Número de WhatsApp**: buscar `573181865120` en `src/pages/contacto.tsx`, `src/pages/portafolio.tsx`, `src/components/whatsapp-fab.tsx` y `src/components/layout/footer.tsx`, y reemplazar por el número real.
 - **Textos e imágenes**: cada página vive en `src/pages/*.tsx`.
 
 ## Notas
