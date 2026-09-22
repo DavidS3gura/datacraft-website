@@ -124,8 +124,8 @@ export default function Portafolio() {
                   </div>
                 </StaggerItem>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[700px] p-0 overflow-hidden border-0">
-                <div className={cn("aspect-[16/9] w-full relative", project.imageBg ?? "bg-muted")}>
+              <DialogContent className="sm:max-w-[700px] p-0 overflow-y-auto border-0 max-h-[90vh]">
+                <div className={cn("aspect-[16/9] max-h-[300px] w-full relative", project.imageBg ?? "bg-muted")}>
                   <img src={project.image} alt={project.title} className={cn("w-full h-full", project.fit === "contain" ? "object-contain" : "object-cover")} />
                 </div>
                 <div className="p-6 sm:p-8">
