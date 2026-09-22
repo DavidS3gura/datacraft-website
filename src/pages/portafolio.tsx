@@ -63,7 +63,6 @@ const projects: Project[] = [
     image: "/images/booking-hero.png",
     links: [
       { label: "Ver planes", url: "https://booking-staging.datacraft.website/planes" },
-      { label: "Ver login", url: "https://booking-staging.datacraft.website/login" },
     ],
     tags: ["Sistema Web", "Automatización"],
     techStack: ["React", "Node.js", "PostgreSQL", "Twilio API"],
