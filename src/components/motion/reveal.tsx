@@ -25,7 +25,7 @@ interface RevealProps extends React.ComponentProps<typeof motion.div> {
   delay?: number
   duration?: number
   once?: boolean
-  amount?: number
+  amount?: number | "some" | "all"
 }
 
 /** Fades/slides children into view as they enter the viewport. */
@@ -54,14 +54,14 @@ export function Reveal({
 interface StaggerProps extends React.ComponentProps<typeof motion.div> {
   staggerDelay?: number
   once?: boolean
-  amount?: number
+  amount?: number | "some" | "all"
 }
 
 /** Wrap a group of children to stagger their entrance; children should use `staggerItem` variants. */
 export function StaggerGroup({
   staggerDelay = 0.12,
   once = true,
-  amount = 0.2,
+  amount = "some",
   children,
   ...props
 }: StaggerProps) {
