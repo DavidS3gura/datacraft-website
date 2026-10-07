@@ -54,7 +54,8 @@ jobs:
           cache-to: type=gha,mode=max,scope=website
 
       - name: Print image digest
-        run: echo "Website digest: ${{ steps.docker_build_website.outputs.digest }}"
+        run: |
+          echo "Website digest: ${{ steps.docker_build_website.outputs.digest }}"
 
   deploy:
     name: Deploy to VPS
