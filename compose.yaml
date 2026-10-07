@@ -3,9 +3,6 @@ name: datacraft-website
 services:
   website:
     image: datacraft-website:production
-    build:
-      context: .
-      dockerfile: Dockerfile
 
     restart: unless-stopped
 
