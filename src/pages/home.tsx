@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "wouter"
-import { ArrowRight, Rocket, MonitorSmartphone, Settings } from "lucide-react"
+import { ArrowRight, Rocket, MonitorSmartphone, Settings, Tag, ChefHat } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Reveal, StaggerGroup, StaggerItem, staggerItem } from "@/components/motion/reveal"
@@ -48,6 +48,42 @@ export default function Home() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Promo POS CORE */}
+      <section className="py-14 bg-gradient-to-r from-accent/15 via-accent/10 to-transparent border-y border-accent/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex items-start gap-5">
+              <div className="hidden sm:flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-accent text-accent-foreground shadow-lg shadow-accent/30">
+                <ChefHat className="h-7 w-7" />
+              </div>
+              <div>
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+                  <Tag className="h-3.5 w-3.5" />
+                  Oferta por 15 días
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+                  Plan POS CORE + <span className="text-accent">Módulo de Recetas y Costos gratis</span>
+                </h2>
+                <p className="mt-2 text-muted-foreground max-w-xl">
+                  Por la compra del plan POS CORE, el módulo de Recetas y Costos va incluido sin costo. Controla ingredientes, costos por plato y márgenes desde el primer día.
+                </p>
+              </div>
+            </div>
+            <a
+              href={`https://wa.me/573181865120?text=${encodeURIComponent("Hola DataCraft, quiero aprovechar la oferta del plan POS CORE con el módulo de Recetas y Costos gratis")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0"
+            >
+              <Button size="lg" className="rounded-full shadow-lg shadow-accent/30 bg-accent hover:bg-accent/90 text-accent-foreground px-8 h-12 font-semibold">
+                Quiero la oferta
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </Reveal>
         </div>
       </section>
 
