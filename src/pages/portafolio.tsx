@@ -70,12 +70,16 @@ const projects: Project[] = [
   },
   {
     id: "pos",
-    title: "POS DataCraft — Punto de Venta",
+    title: "Nalto POS — Punto de Venta",
     description: "Sistema POS para restaurantes y negocios: comandas en tiempo real, pagos, facturación, inventario y control de personal en una sola plataforma.",
     image: "/images/pos-datacraft.png",
+    links: [
+      { label: "Conocer Nalto", url: "https://pos.datacraft.website/nalto" },
+      { label: "Ver planes", url: "https://pos.datacraft.website/planes" },
+    ],
     tags: ["POS", "Sistema Web"],
     techStack: ["React", "Node.js", "PostgreSQL", "NestJS"],
-    fullDesc: "POS DataCraft centraliza la operación de restaurantes: comandas en tiempo real, múltiples métodos de pago, propinas, documentos de venta, inventario y control de personal (meseros, cajeros y cocina) en un solo flujo."
+    fullDesc: "Nalto POS centraliza la operación de restaurantes: comandas en tiempo real, múltiples métodos de pago, propinas, documentos de venta, inventario y control de personal (meseros, cajeros y cocina) en un solo flujo."
   },
   {
     id: "dashboard",
