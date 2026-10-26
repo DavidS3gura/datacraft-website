@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "wouter"
-import { ArrowRight, Rocket, MonitorSmartphone, Settings } from "lucide-react"
+import { ArrowRight, Rocket, MonitorSmartphone, Settings, Gift } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Reveal, StaggerGroup, StaggerItem, staggerItem } from "@/components/motion/reveal"
@@ -47,8 +47,43 @@ export default function Home() {
                 Ver nuestros servicios
               </Button>
             </Link>
+            <a
+              href="https://rewards.datacraft.website/program/italiana"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base rounded-full px-8 h-12 border-accent/40 text-accent hover:bg-accent/10 hover:text-accent">
+                <Gift className="mr-2 h-4 w-4" />
+                Para nuestros clientes fieles
+              </Button>
+            </a>
           </div>
         </div>
+      </section>
+
+      {/* Rewards Banner */}
+      <section className="py-12 bg-accent/5 border-b border-accent/10">
+        <Reveal className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+          <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent mb-5">
+            <Gift className="h-6 w-6" />
+          </div>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-3">
+            Ahora te premiamos por cada compra
+          </h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            Porque valoramos lo comprometido que eres con nosotros, lanzamos nuestro programa de fidelidad: acumula beneficios cada vez que compras.
+          </p>
+          <a
+            href="https://rewards.datacraft.website/program/italiana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="rounded-full shadow-lg shadow-accent/20 px-8 h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+              Conocer el programa
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
+        </Reveal>
       </section>
 
       {/* Benefits Section */}
